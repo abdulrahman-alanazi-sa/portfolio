@@ -3,24 +3,32 @@
 
 <head>
 
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Abdulrahman Alanazi</title>
 
+<link rel="icon" type="image/png" href="favicon.png">
+
     <link rel="stylesheet" href="AA_style_v4.css">
-    
-<script src="https://cdn.counter.dev/script.js" data-id="e667f343-c43a-4a04-bcc8-29028c6f5f17" data-utcoffset="3"></script>
+
+    <script src="https://cdn.counter.dev/script.js" data-id="e667f343-c43a-4a04-bcc8-29028c6f5f17" data-utcoffset="3"></script>
+
 </head>
 
 <body>
 
+<div id="top"></div>
+
+<div id="progress-bar"></div>
+
     <nav class="navbar">
 
-        <div class="logo">
-            AA.
-        </div>
+        <a href="#top" class="logo">
+    AA.
+</a>
 
         <div class="nav-links">
 
@@ -55,6 +63,22 @@
             <h2>
                 Operations Specialist
             </h2>
+<div class="status-badge">
+
+ Open to Opportunities
+
+</div>
+<div class="badges">
+
+<span>📦 Operations</span>
+
+<span>✈️ Airline Reservations</span>
+
+<span>📊 Reporting & Analysis</span>
+
+<span>💡 Continuous Learner</span>
+
+</div>
 
             <p class="hero-description">
 
@@ -90,18 +114,17 @@
     <section class="highlights">
 
         <div class="stat-card">
-            <h3>18+</h3>
+            <h3 class="counter" data-target="18">0</h3>
             <p>Months Experience</p>
         </div>
 
         <div class="stat-card">
-            <h3>2</h3>
+<h3 class="counter" data-target="2">0</h3>
             <p>Professional Roles</p>
         </div>
 
         <div class="stat-card">
-            <h3>3</h3>
-            <p>Certificates</p>
+<h3 class="counter" data-target="3">0</h3>            <p>Certificates</p>
         </div>
 
         <div class="stat-card">
@@ -111,7 +134,7 @@
 
     </section>
 
-    <section id="about" class="content-section">
+    <section id="about" class="content-section hidden">
 
         <h2>About Abdulrahman</h2>
 
@@ -140,7 +163,7 @@ He believes that professional growth comes from discipline, accountability, cont
 
     </section>
 
-    <section id="journey" class="content-section">
+    <section id="journey" class="content-section hidden">
 
         <h2>Professional Journey</h2>
 
@@ -170,7 +193,7 @@ He believes that professional growth comes from discipline, accountability, cont
 
     </section>
 
-    <section id="experience" class="content-section">
+<section id="experience" class="content-section hidden">
 
         <h2>Professional Experience</h2>
 
@@ -285,6 +308,47 @@ He believes that professional growth comes from discipline, accountability, cont
         </div>
 
     </section>
+
+    <section class="content-section hidden">
+
+    <h2>💻 Personal Project</h2>
+
+    <div class="experience-card">
+
+        <h3>Personal Portfolio Website</h3>
+
+        <br>
+
+        <p>
+
+            Designed and developed from scratch using HTML, CSS and JavaScript.
+
+            This project was created to build a professional platform that presents my experience, career journey, and skills in a more interactive way than a traditional CV.
+
+        </p>
+
+        <br>
+
+        <h4>Features</h4>
+
+        <ul>
+
+            <li>Responsive Design</li>
+
+            <li>Arabic & English Versions</li>
+
+            <li>Interactive Animations</li>
+
+            <li>Modern User Interface</li>
+
+            <li>Custom Design From Scratch</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
 <section class="content-section">
 
     <h2>Systems & Tools</h2>
@@ -306,7 +370,25 @@ He believes that professional growth comes from discipline, accountability, cont
     </div>
 
 </section>
-    <section id="skills" class="content-section">
+
+<section class="content-section hidden">
+
+    <h2>📚 Currently Learning</h2>
+
+    <div class="skills-grid">
+
+        <div>Microsoft Power BI Data Analyst</div>
+
+        <div>Data Visualization</div>
+
+        <div>Advanced Excel Skills</div>
+
+    </div>
+
+</section>
+
+
+<section id="skills" class="content-section hidden">
 
         <h2>Core Competencies</h2>
 
@@ -433,8 +515,8 @@ He believes that professional growth comes from discipline, accountability, cont
     </p>
 
 </section>
-</section><section id="contact" class="content-section">
 
+<section id="contact" class="content-section hidden">
     <h2>Contact</h2>
 
     <div class="skills-grid">
@@ -457,6 +539,202 @@ He believes that professional growth comes from discipline, accountability, cont
 
 Proudly designed and developed from scratch by Abdulrahman Alanazi as part of his continuous learning and professional development journey.
     </footer>
+
+
+
+ <script>
+
+const counters = document.querySelectorAll('.counter');
+
+let started = false;
+
+function startCounters() {
+
+    if (started) return;
+
+    started = true;
+
+    counters.forEach(counter => {
+
+        const target = +counter.dataset.target;
+
+        let current = 0;
+
+        const increment = target / 100;
+
+        function updateCounter() {
+
+            if (current < target) {
+
+                current += increment;
+
+                if (target === 18) {
+    counter.innerText = Math.ceil(current) + "+";
+} else {
+    counter.innerText = Math.ceil(current);
+}
+
+                setTimeout(updateCounter, 13);
+
+            } else {
+
+                if (target === 18) {
+    counter.innerText = target + "+";
+} else {
+    counter.innerText = target;
+}
+
+            }
+
+        }
+
+        updateCounter();
+
+    });
+
+}
+
+const highlightsSection = document.querySelector('.highlights');
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            startCounters();
+
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+observer.observe(highlightsSection);
+
+</script>
+
+
+
+
+<script>
+
+const hiddenElements =
+document.querySelectorAll('.hidden');
+
+const revealObserver =
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+hiddenElements.forEach(el=>{
+revealObserver.observe(el);
+});
+
+</script>
+
+
+<script>
+
+window.addEventListener("scroll",()=>{
+
+const totalHeight =
+document.documentElement.scrollHeight -
+window.innerHeight;
+
+const progress =
+(window.pageYOffset / totalHeight) * 100;
+
+document.getElementById("progress-bar")
+.style.width = progress + "%";
+
+});
+
+</script>
+
+<script>
+
+const image =
+document.querySelector(".hero-right img");
+
+image.addEventListener("mousemove",(e)=>{
+
+const rect = image.getBoundingClientRect();
+
+const x =
+e.clientX - rect.left - rect.width / 2;
+
+const y =
+e.clientY - rect.top - rect.height / 2;
+
+image.style.transform =
+`translate(${x/20}px, ${y/20}px)`;
+
+});
+
+image.addEventListener("mouseleave",()=>{
+
+image.style.transform =
+"translate(0px,0px)";
+
+});
+
+</script>
+
+<script>
+
+const sections =
+document.querySelectorAll("section[id]");
+
+const navLinks =
+document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll",()=>{
+
+let current = "";
+
+sections.forEach(section=>{
+
+const sectionTop =
+section.offsetTop - 150;
+
+if(window.pageYOffset >= sectionTop){
+
+current = section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(
+link.getAttribute("href") === "#" + current
+){
+link.classList.add("active");
+}
+
+});
+
+});
+
+</script>
 
 </body>
 
