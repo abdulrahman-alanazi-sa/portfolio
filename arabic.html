@@ -9,18 +9,25 @@
 
     <title>عبدالرحمن العنزي</title>
 
+    <link rel="icon" type="image/png" href="favicon.png">
+
     <link rel="stylesheet" href="AA_style_v4.css">
-    
+
 <script src="https://cdn.counter.dev/script.js" data-id="e667f343-c43a-4a04-bcc8-29028c6f5f17" data-utcoffset="3"></script>
+
 </head>
 
 <body>
 
+<div id="top"></div>
+
+<div id="progress-bar"></div>
+
     <nav class="navbar">
 
-        <div class="logo">
-            AA.
-        </div>
+        <a href="#top" class="logo">
+    AA.
+</a>
 
         <div class="nav-links">
 
@@ -55,7 +62,21 @@
             <h2>
                 أخصائي عمليات
             </h2>
+            <div class="status-badge">
 
+ متاح للفرص الوظيفية
+
+</div>
+<div class="badges">
+
+<span>📦 إدارة العمليات</span>
+
+<span>✈️ عمليات الحجوزات الجوية</span>
+
+<span>📊 تحليل البيانات والتقارير</span>
+
+<span>💡 التطوير والتعلم المستمر</span>
+</div>
             <p class="hero-description">
 
                 متخصص في مجال العمليات، أمتلك خبرة في حجوزات الطيران، وتنسيق العمليات، ومتابعة سير العمل، وإعداد التقارير، وحل المشكلات التشغيلية.
@@ -88,18 +109,17 @@
     <section class="highlights">
 
         <div class="stat-card">
-            <h3>18+</h3>
+<h3 class="counter" data-target="18">0</h3>
             <p>شهر خبرة</p>
         </div>
 
         <div class="stat-card">
-            <h3>2</h3>
+<h3 class="counter" data-target="2">0</h3>
             <p>وظيفة مهنية</p>
         </div>
 
         <div class="stat-card">
-            <h3>3</h3>
-            <p>شهادات</p>
+<h3 class="counter" data-target="3">0</h3>            <p>شهادات</p>
         </div>
 
         <div class="stat-card">
@@ -109,11 +129,11 @@
 
     </section>
 
-    <section id="about" class="content-section">
+<section id="about" class="content-section hidden">
 
         <h2>من هو عبدالرحمن</h2>
 
-        <p>
+        
 
             <p>
 
@@ -131,7 +151,8 @@
 
     </section>
 
-    <section id="journey" class="content-section">
+    <section id="journey" class="content-section hidden">
+
 
         <h2>المسيرة المهنية</h2>
 
@@ -161,7 +182,7 @@
 
     </section>
 
-    <section id="experience" class="content-section">
+    <section id="experience" class="content-section hidden">
 
         <h2>الخبرات المهنية</h2>
 
@@ -276,6 +297,45 @@
         </div>
 
     </section>
+
+    <section class="content-section hidden">
+
+    <h2>💻 مشروع شخصي</h2>
+
+    <div class="experience-card">
+
+        <h3>الموقع الشخصي الاحترافي</h3>
+
+        <br>
+
+        <p>
+
+            قمت بتصميم وتطوير هذا الموقع بالكامل من الصفر باستخدام HTML و CSS و JavaScript بهدف إنشاء منصة احترافية تعرض خبراتي ومسيرتي المهنية ومهاراتي بطريقة أكثر تفاعلية من السيرة الذاتية التقليدية.
+
+        </p>
+
+        <br>
+
+        <h4>أبرز المميزات</h4>
+
+        <ul>
+
+            <li>تصميم متجاوب لجميع الأجهزة</li>
+
+            <li>نسختان عربية وإنجليزية</li>
+
+            <li>عناصر تفاعلية وتأثيرات بصرية</li>
+
+            <li>واجهة حديثة وسهلة الاستخدام</li>
+
+            <li>تصميم وتطوير كامل من الصفر</li>
+
+        </ul>
+
+    </div>
+
+</section>
+
 <section class="content-section">
 
     <h2>الأنظمة والأدوات</h2>
@@ -297,7 +357,24 @@
     </div>
 
 </section>
-    <section id="skills" class="content-section">
+
+<section class="content-section hidden">
+
+    <h2>📚 أتعلم حاليًا</h2>
+
+    <div class="skills-grid">
+
+        <div>Microsoft Power BI Data Analyst</div>
+
+        <div>تحليل البيانات والتصور البصري</div>
+
+        <div>مهارات Excel المتقدمة</div>
+
+    </div>
+
+</section>
+
+    <section id="skills" class="content-section hidden">
 
         <h2>المهارات الأساسية</h2>
 
@@ -323,7 +400,7 @@
 
     </section>
 
-    <section class="content-section">
+    <section id="quick-facts" class="content-section hidden">
 
     <h2>معلومات سريعة</h2>
 
@@ -349,7 +426,7 @@
 
 </section>
 
-<section class="content-section">
+<section id="values" class="content-section hidden">
 
     <h2>القيم المهنية</h2>
 
@@ -397,11 +474,10 @@
   <br>
 
   </p>
-يمثل هذا الموقع إحدى المبادرات الشخصية التي قمت بتطويرها بهدف التعلم، وتحسين مهاراتي التقنية، وعرض خبراتي ومسيرتي المهنية بطريقة احترافية.
+  يمثل هذا الموقع إحدى المبادرات الشخصية التي قمت بتطويرها بهدف التعلم، وتحسين مهاراتي التقنية، وعرض خبراتي ومسيرتي المهنية بطريقة احترافية.
 
     </p>
-<section class="content-section">
-</section>
+
     <h2>الهدف المهني</h2>
 
     <p>
@@ -441,6 +517,167 @@
         تم تصميم وتطوير هذا الموقع بالكامل من الصفر بواسطة عبدالرحمن العنزي كجزء من رحلة التعلم والتطوير المهني المستمر.
 
     </footer>
+<script>
+
+const counters = document.querySelectorAll('.counter');
+
+let started = false;
+
+function startCounters() {
+
+    if (started) return;
+
+    started = true;
+
+    counters.forEach(counter => {
+
+        const target = +counter.dataset.target;
+
+        let current = 0;
+
+        const increment = target / 100;
+
+        function updateCounter() {
+
+            if (current < target) {
+
+                current += increment;
+
+                if (target === 18) {
+    counter.innerText = Math.ceil(current) + "+";
+} else {
+    counter.innerText = Math.ceil(current);
+}
+
+                setTimeout(updateCounter, 13);
+
+            } else {
+
+                if (target === 18) {
+    counter.innerText = target + "+";
+} else {
+    counter.innerText = target;
+}
+
+            }
+
+        }
+
+        updateCounter();
+
+    });
+
+}
+
+const highlightsSection = document.querySelector('.highlights');
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            startCounters();
+
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+observer.observe(highlightsSection);
+
+</script>
+
+
+<script>
+
+const hiddenElements =
+document.querySelectorAll('.hidden');
+
+const revealObserver =
+new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add('show');
+
+}
+
+});
+
+},{
+threshold:0.15
+});
+
+hiddenElements.forEach(el=>{
+revealObserver.observe(el);
+});
+
+</script>
+
+<script>
+
+window.addEventListener("scroll",()=>{
+
+const totalHeight =
+document.documentElement.scrollHeight -
+window.innerHeight;
+
+const progress =
+(window.pageYOffset / totalHeight) * 100;
+
+document.getElementById("progress-bar")
+.style.width = progress + "%";
+
+});
+
+</script>
+
+<script>
+
+const sections =
+document.querySelectorAll("section[id]");
+
+const navLinks =
+document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll",()=>{
+
+let current = "";
+
+sections.forEach(section=>{
+
+const sectionTop =
+section.offsetTop - 150;
+
+if(window.pageYOffset >= sectionTop){
+
+current = section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(
+link.getAttribute("href") === "#" + current
+){
+link.classList.add("active");
+}
+
+});
+
+});
+
+</script>
 
 </body>
 
