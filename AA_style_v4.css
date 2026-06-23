@@ -609,3 +609,13 @@ cursor:pointer;
 transition:all .3s ease;
 
 }
+.stat-card:active,
+.experience-card:active,
+.skills-grid div:active,
+.contact-btn:active,
+.btn:active,
+.badges span:active{
+
+transform:scale(.98);
+
+}
